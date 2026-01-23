@@ -113,7 +113,7 @@ async def chat(request: ChatRequest):
         scope_filter = {"$in": ["permanent", f"user_{request.session_id}"]}
     
     try:
-        response_data = gen_answer_with_scope(request.message,scope_filter)
+        response_data = gen_answer_with_scope(request.message,scope_filter,session_id=request.session_id)
         return response_data
     except Exception as e:
         print(f"Error in chat {str(e)}")

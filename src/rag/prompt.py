@@ -12,6 +12,8 @@ def get_prompt_template():
     3. If you truly do not know the answer at all, then say you don't know.
     4. Use three sentences maximum and keep the answer concise.
 
+    HISTORY:{history}
+    
     CONTEXT:{context}
 
     QUESTION:{question}
